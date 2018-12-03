@@ -5,14 +5,21 @@
 
   <div *ngIf="afAuth.user | async as user; else showLogin">
     <div class="row d-flex justify-content-between mb-5">
-      <input type="text" class="col-8" id="message" placeholder="Chat here..." autofocus (keyup.enter)="sendChat($event.target.value)"
-        [(ngModel)]="message" />
+      <input 
+      (keyup.enter)="sendChat($event.target.value)"
+      [(ngModel)]="message"
+      type="text" class="col-8" id="message" placeholder="Chat here..." autofocus />
       <button class="col-3 btn" (click)="logout()">Logout</button>
     </div>
 
-    <div class="chat-container row" *ngFor="let item of items | async; let i = index">
-      <a href="#">{{item.name}}</a>
-      <p class="col-12">{{item.message}}</p>
+    <div class="chat-container row" *ngFor="let item of items | async | reverse; let i = index">
+      <div class="imgX">
+        <img [src]="item.image" [alt]="item.names">
+      </div>
+      <div class="fullX">
+          <a href="#">{{item.name}}</a>
+          <p>{{item.message}}</p>
+      </div>
     </div>
   </div>
 </div>

@@ -39,7 +39,7 @@ export class AppComponent {
   }
   
   sendChat(newMessage: string) {
-    this.itemsRef.push({ message: newMessage, name: this.user.displayName});
+    this.itemsRef.push({ message: newMessage, name: this.user.displayName, image: this.user.photoURL});
     this.message = '';
   }
 

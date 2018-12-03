@@ -10,13 +10,13 @@ input#message {
 }
 
 .chat-container:nth-child(4) {
-    opacity: .8;
+    opacity: .4;
 }
 .chat-container:nth-child(3) {
     opacity: .6;
 }
 .chat-container:nth-child(2) {
-    opacity: .4;
+    opacity: .8;
 }
 
 .chat-container a {
@@ -26,4 +26,17 @@ input#message {
 .chat-container p {
     background:#323035;
     font-size: 1.2em;
+}
+
+.imgX {
+    width: 10%;
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.fullX {
+    width: 90%;
 }
