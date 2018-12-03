@@ -40,3 +40,13 @@ img {
 .fullX {
     width: 90%;
 }
+
+@media only screen and (max-width: 600px) {
+    .imgX {
+        width: 25%;
+    }
+
+    .fullX {
+        width: 75%;
+    }
+}
