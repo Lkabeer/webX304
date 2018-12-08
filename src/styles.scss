@@ -5,6 +5,14 @@
 body {
     background-color:#242226;
     color: #fff;
+    height: 100vh;
+}
+
+.loginX {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {

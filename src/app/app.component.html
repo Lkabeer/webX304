@@ -1,15 +1,17 @@
-<div class="chatX container mt-5">
-  <ng-template #showLogin>
+<ng-template #showLogin>
+  <div class="loginX container">
     <button class="btn" (click)="login()">Login With Facebook</button>
-  </ng-template>
+  </div>
+</ng-template>
 
-  <div *ngIf="afAuth.user | async as user; else showLogin">
+<div *ngIf="afAuth.user | async as user; else showLogin">
+  <div class="chatX container mt-5">
     <div class="row d-flex justify-content-between mb-5">
       <input 
       (keyup.enter)="sendChat($event.target.value)"
       [(ngModel)]="message"
-      type="text" class="col-8" id="message" placeholder="Chat here..." autofocus />
-      <button class="col-3 btn" (click)="logout()">Logout</button>
+      type="text" class="col-8 ml-2" id="message" placeholder="Chat here..." autofocus />
+      <button class="col-3 btn mr-2" (click)="logout()">Logout</button>
     </div>
 
     <div class="chat-container row" *ngFor="let item of items | async | reverse; let i = index">
