@@ -14,12 +14,14 @@
       <button class="col-3 btn mr-2" (click)="logout()">Logout</button>
     </div>
 
-    <div class="chat-container row" *ngFor="let item of items | async | reverse; let i = index">
+    <!-- Reverse X-Team -->
+    <!-- <div class="chat-container row" *ngFor="let item of items | async | reverse; let i = index"> -->
+    <div class="chat-container row" *ngFor="let item of items | async; let i = index">
       <div class="imgX">
         <img [src]="item.image" [alt]="item.names">
       </div>
       <div class="fullX">
-          <a href="#">{{item.name}}</a>
+          <a routerLink="/">{{item.name}}</a>
           <p>{{item.message}}</p>
       </div>
     </div>

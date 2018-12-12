@@ -22,7 +22,7 @@ export class AppComponent {
   editId: number;
 
   constructor(public db: AngularFireDatabase, public afAuth: AngularFireAuth) {
-    this.itemsRef = db.list('messages', ref => ref.limitToLast(5));
+    this.itemsRef = db.list('messages', ref => ref.limitToLast(100));
     // Use snapshotChanges().map() to store the key
     this.items = this.itemsRef.snapshotChanges().pipe(
       map(changes =>
